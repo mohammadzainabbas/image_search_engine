@@ -8,3 +8,6 @@ const client = weaviate.client({
 const schemaRes = await client.schema.getter().do();
 
 console.log(schemaRes);
+
+const schemaConfig = {
+    class: 'Person',
