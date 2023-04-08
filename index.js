@@ -30,5 +30,7 @@ const schemaConfig = {
     ],
 };
 
+// Update the schema (roughly equivalent to the database migration)
 await client.schema.classCreator().withClass(schemaConfig).do();
+
 
