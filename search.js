@@ -22,12 +22,10 @@ const promises = testImageFiles.map(async (imageFile) => {
     .withClassName('Person')
     .withFields(['image'])
     .withNearImage({ image: test_b64 })
-    .withLimit(5)
+    .withLimit(LIMIT)
+    .do();
 
-
-
-
+    console.log(resImage);
 }
 
-
-
+await Promise.all(promises);
