@@ -13,4 +13,11 @@ const schemaConfig = {
     'class': 'Person',
     'vectorizer': 'img2vec-neural',
     'vectorIndexType': 'hnsw',
-    
+    'moduleConfig': {
+        'image2vec-neural': {
+            'imageFields': ['image'],
+        },
+    },
+    'properties': [
+        
+
