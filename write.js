@@ -20,9 +20,9 @@ const promises = imageFiles.map(async (imageFile) => {
     .withClassName('Person')
     .withProperties({
         image: b64,
-        text: imageFile,
+        text: imageFile.split('.')[0].split('_').join(' '),
     })
     .do();
 });
 
-console.log(imageFiles);
+await Promise.all(promises);
