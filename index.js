@@ -30,3 +30,5 @@ const schemaConfig = {
     ],
 };
 
+await client.schema.classCreator().withClass(schemaConfig).do();
+
