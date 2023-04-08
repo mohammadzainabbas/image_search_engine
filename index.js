@@ -10,4 +10,7 @@ const schemaRes = await client.schema.getter().do();
 console.log(schemaRes);
 
 const schemaConfig = {
-    class: 'Person',
+    'class': 'Person',
+    'vectorizer': 'img2vec-neural',
+    'vectorIndexType': 'hnsw',
+    
