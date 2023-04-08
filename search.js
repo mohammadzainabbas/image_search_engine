@@ -28,4 +28,4 @@ const promises = testImageFiles.map(async (imageFile) => {
     console.log(resImage);
 }
 
-await Promise.all(promises);
+await Promise.all(promises)
