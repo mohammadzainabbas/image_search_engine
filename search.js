@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from 'fs';
+import { readdirSync, readFileSync, writeFileSync } from 'fs';
 import weaviate from 'weaviate-ts-client';
 
 const client = weaviate.client({
