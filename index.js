@@ -5,4 +5,6 @@ const client = new weaviate.Client({
     host: 'localhost:8080',
 });
 
-const schema = new weaviate.Schema(client);
+const schemaRes = await client.schema.getter().do();
+
+console.log(schemaRes);
