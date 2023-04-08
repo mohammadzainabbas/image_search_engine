@@ -15,8 +15,14 @@ const imageFiles = readdirSync('./images');
 
 const promises = imageFiles.map(async (imageFile) => {
     const b64 = toBase64(`./images/${imageFile}`);
-    
 
-    await client
+    await client.data.creator()
+    .withClassName('Person')
+    .withProperties({
+        image: b64,
+        text: imageFile,
+    })
+    .do();
+});
 
 console.log(imageFiles);
