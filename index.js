@@ -19,5 +19,14 @@ const schemaConfig = {
         },
     },
     'properties': [
-        
+        {
+            'name': 'image',
+            'dataType': ['blob'],
+        },
+        {
+            'name': 'text',
+            'dataType': ['string'],
+        }
+    ],
+};
 
