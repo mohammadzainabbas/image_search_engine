@@ -1,0 +1,2 @@
+const imageFiles = readdirSync('./images');
+
