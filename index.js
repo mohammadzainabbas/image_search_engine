@@ -5,10 +5,6 @@ const client = weaviate.client({
     host: 'localhost:8080',
 });
 
-const schemaRes = await client.schema.getter().do();
-
-console.log(schemaRes);
-
 const schemaConfig = {
     'class': 'Person',
     'vectorizer': 'img2vec-neural',
@@ -33,4 +29,6 @@ const schemaConfig = {
 // Update the schema (roughly equivalent to the database migration)
 await client.schema.classCreator().withClass(schemaConfig).do();
 
+const schemaRes = await client.schema.getter().do();
 
+console.log(schemaRes);
