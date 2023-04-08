@@ -26,6 +26,6 @@ const promises = testImageFiles.map(async (imageFile) => {
     .do();
 
     console.log(resImage);
-}
+});
 
 await Promise.all(promises)
